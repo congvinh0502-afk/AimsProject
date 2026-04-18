@@ -1,0 +1,9 @@
+1. Nếu bạn tạo một constructor để xây dựng DVD bằng title và một constructor khác để xây dựng DVD bằng category, Java có cho phép không?
+
+Không, Java không cho phép điều này. Các constructor phải khác nhau về số lượng hoặc kiểu dữ liệu của tham số. Nếu cả hai constructor đều chỉ có một tham số kiểu String, Java sẽ không thể phân biệt được chúng.
+
+2. Khi nào nên sử dụng accessor methods (getter/setter)?
+
+Getter và setter nên được sử dụng một cách cẩn thận. Việc lạm dụng chúng có thể phá vỡ tính đóng gói (encapsulation) bằng cách làm lộ dữ liệu bên trong của đối tượng. Thay vì sửa đổi dữ liệu trực tiếp thông qua setter, tốt hơn nên cung cấp các phương thức thể hiện hành vi như deposit() hoặc withdraw().
+
+Tuy nhiên, getter có thể được sử dụng khi chỉ cần đọc dữ liệu (read-only), hoặc khi làm việc với các đối tượng đơn giản như Data Transfer Object (DTO).
