@@ -18,5 +18,8 @@ public class Aims {
         anOrder.removeDigitalVideoDisc(dvd2);
 
         System.out.println("Total cost after removal: " + anOrder.totalCost());
+        System.out.println("DVD1 ID: " + dvd1.getId());
+        System.out.println("DVD2 ID: " + dvd2.getId());
+        System.out.println("DVD3 ID: " + dvd3.getId());
     }
 }
