@@ -45,4 +45,21 @@ public class Cart {
         }
         return total;
     }
+    //*************array*************
+    public void addDigitalVideoDisc(DigitalVideoDisc[] dvdList) {
+    for (DigitalVideoDisc dvd : dvdList) {
+        addDigitalVideoDisc(dvd);
+    }
+}
+    //***************varargs******************
+    public void addDigitalVideoDisc(DigitalVideoDisc... dvdList) {
+    for (DigitalVideoDisc dvd : dvdList) {
+        addDigitalVideoDisc(dvd);
+    }
+}
+    //*************2DVD**************
+    public void addDigitalVideoDisc(DigitalVideoDisc dvd1, DigitalVideoDisc dvd2) {
+    addDigitalVideoDisc(dvd1);
+    addDigitalVideoDisc(dvd2);
+}
 }
