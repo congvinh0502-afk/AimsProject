@@ -1,3 +1,5 @@
+package hust.soict.dsai.aims.cart;
+import hust.soict.dsai.aims.disc.DigitalVideoDisc;
 public class Cart {
     public static final int MAX_NUMBER_ORDERED = 20;
 
@@ -46,11 +48,11 @@ public class Cart {
         return total;
     }
     //*************array*************
-    public void addDigitalVideoDisc(DigitalVideoDisc[] dvdList) {
+    /*public void addDigitalVideoDisc(DigitalVideoDisc[] dvdList) {
     for (DigitalVideoDisc dvd : dvdList) {
         addDigitalVideoDisc(dvd);
     }
-}
+}*/
     //***************varargs******************
     public void addDigitalVideoDisc(DigitalVideoDisc... dvdList) {
     for (DigitalVideoDisc dvd : dvdList) {
