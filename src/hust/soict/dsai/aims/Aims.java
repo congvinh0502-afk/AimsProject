@@ -1,6 +1,6 @@
-import src.hust.soict.dsai.aims.cart.Cart;
-import src.hust.soict.dsai.aims.dist.DigitalVideoDisc;
-
+package hust.soict.dsai.aims;
+import hust.soict.dsai.aims.cart.Cart;
+import hust.soict.dsai.aims.disc.DigitalVideoDisc;
 public class Aims {
     public static void main(String[] args) {
 
@@ -17,8 +17,7 @@ public class Aims {
 
         System.out.println("Total cost is: " + anOrder.totalCost());
 
-        // Test remove
-        anOrder.removeDigitalVideoDisc(dvd2);
+      
 
         System.out.println("Total cost after removal: " + anOrder.totalCost());
         System.out.println("DVD1 ID: " + dvd1.getId());
