@@ -1,9 +1,95 @@
-1. Nếu bạn tạo một constructor để xây dựng DVD bằng title và một constructor khác để xây dựng DVD bằng category, Java có cho phép không?
+LAB 03 – ANSWERS
 
-Không, Java không cho phép điều này. Các constructor phải khác nhau về số lượng hoặc kiểu dữ liệu của tham số. Nếu cả hai constructor đều chỉ có một tham số kiểu String, Java sẽ không thể phân biệt được chúng.
+1. Method Overloading
 
-2. Khi nào nên sử dụng accessor methods (getter/setter)?
+* Overloading là việc nhiều method có cùng tên nhưng khác tham số (kiểu hoặc số lượng).
+* So sánh:
 
-Getter và setter nên được sử dụng một cách cẩn thận. Việc lạm dụng chúng có thể phá vỡ tính đóng gói (encapsulation) bằng cách làm lộ dữ liệu bên trong của đối tượng. Thay vì sửa đổi dữ liệu trực tiếp thông qua setter, tốt hơn nên cung cấp các phương thức thể hiện hành vi như deposit() hoặc withdraw().
+  * Dùng mảng (DigitalVideoDisc[]): phải tạo mảng trước → hơi bất tiện.
+  * Dùng varargs (DigitalVideoDisc...): truyền trực tiếp nhiều đối tượng → tiện hơn.
+    → Kết luận: varargs tiện và linh hoạt hơn.
 
-Tuy nhiên, getter có thể được sử dụng khi chỉ cần đọc dữ liệu (read-only), hoặc khi làm việc với các đối tượng đơn giản như Data Transfer Object (DTO).
+2. Passing Parameter
+
+* Java là ngôn ngữ pass by value.
+* Giải thích:
+
+  * Khi gọi swap(o1, o2), giá trị tham chiếu được copy → không đổi object gốc.
+  * Vì vậy swap không làm thay đổi vị trí 2 object.
+* changeTitle:
+
+  * Truyền bản copy của reference → vẫn trỏ đến object thật.
+  * Thay đổi thuộc tính → object bị thay đổi.
+    → Kết luận: Java luôn truyền tham trị (pass by value).
+
+3. Swap method đúng
+
+* Muốn swap thật sự cần dùng wrapper (array hoặc class chứa object).
+
+4. Debugging
+
+* Breakpoint: điểm dừng chương trình.
+* Step Into: vào trong hàm
+* Step Over: chạy qua hàm
+* Step Return: thoát hàm
+* Resume: chạy tiếp
+
+5. Class member vs Instance member
+
+* Class member (static):
+
+  * Dùng chung cho mọi object
+  * Ví dụ: nbDigitalVideoDiscs
+* Instance member:
+
+  * Riêng từng object
+  * Ví dụ: title, cost, id
+
+6. Cart functions
+
+* printCart(): in danh sách DVD + tổng tiền
+* searchById(): tìm theo id
+* searchByTitle(): tìm theo title (dùng isMatch)
+
+7. Store class
+
+* addDVD(): thêm DVD
+* removeDVD(): xóa DVD
+
+8. Package organization
+
+* Mục đích:
+
+  * Quản lý code rõ ràng
+  * Tránh trùng tên class
+* Cấu trúc:
+  hust.soict.dsai.aims.*
+  hust.soict.dsai.test.*
+
+9. String vs StringBuilder vs StringBuffer
+
+* String:
+
+  * Immutable → tạo nhiều object → chậm
+* StringBuilder:
+
+  * Nhanh nhất
+  * Không thread-safe
+* StringBuffer:
+
+  * Thread-safe
+  * Chậm hơn StringBuilder
+
+→ Kết luận:
+
+* Dùng StringBuilder trong hầu hết trường hợp
+* Dùng StringBuffer khi cần đa luồng
+
+10. Garbage problem
+
+* Dùng “+” trong loop → tạo nhiều object → tốn bộ nhớ
+* Giải pháp:
+
+  * Dùng StringBuilder hoặc StringBuffer
+
+END.
